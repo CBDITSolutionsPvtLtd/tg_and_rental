@@ -1,0 +1,476 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-02 23:14:18.089320",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "disabled",
+  "section_break_xwya",
+  "customer",
+  "customer_name",
+  "agreement_type",
+  "reference_by",
+  "column_break_bdhw",
+  "machine_make",
+  "machine",
+  "model_no",
+  "serial_no",
+  "agree_time_column",
+  "time_duration",
+  "time_unit",
+  "start_date",
+  "end_date",
+  "agreement_commitment_section",
+  "column_break_hpao",
+  "copy_commitment",
+  "comm_copies_pm",
+  "comm_rate_pc",
+  "column_break_sxwn",
+  "amount_commitment",
+  "comm_amt_pm",
+  "monthly_fix_amt",
+  "total_copies_limit",
+  "section_break_pxqo",
+  "agreement_items",
+  "section_break_uwkf",
+  "taxes",
+  "total_tax",
+  "section_break_vwgu",
+  "po_no",
+  "amended_from",
+  "column_break_nznj",
+  "status",
+  "tab_2_tab",
+  "customer_details_section",
+  "customer_address",
+  "address_line1",
+  "address_line2",
+  "gst_no",
+  "column_break_dsmv",
+  "city",
+  "state",
+  "pincode",
+  "column_break_jmcq",
+  "contact",
+  "contact_person",
+  "contact_number",
+  "email_id",
+  "company_details_section",
+  "company",
+  "column_break_rbmt",
+  "column_break_ggzw",
+  "more_info_tab",
+  "copies_used"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xwya",
+   "fieldtype": "Section Break",
+   "label": "Customer & Machine Details"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agreement_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Agreement Type",
+   "options": "\nRental\nTG",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bdhw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "label": "Machine Name",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "machine.model_no",
+   "fieldname": "model_no",
+   "fieldtype": "Data",
+   "label": "Model No"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent TG Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_pxqo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "agreement_items",
+   "fieldtype": "Table",
+   "label": "Agreement Items",
+   "options": "Agreement Items Table"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Address & Contact"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "gst_no",
+   "fieldtype": "Data",
+   "label": "GST No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jmcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vwgu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.agreement_type == 'TG';",
+   "fieldname": "reference_by",
+   "fieldtype": "Data",
+   "label": "Reference By",
+   "read_only_depends_on": "eval: doc.agreement_type == 'Rental';"
+  },
+  {
+   "fieldname": "agreement_commitment_section",
+   "fieldtype": "Section Break",
+   "label": "Agreement & Commitment"
+  },
+  {
+   "fieldname": "column_break_hpao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comm_copies_pm",
+   "fieldtype": "Int",
+   "label": "Committed Copies Per Month"
+  },
+  {
+   "fieldname": "comm_rate_pc",
+   "fieldtype": "Currency",
+   "label": "Committed Rate Per Copy",
+   "options": "Company:company:default_currency",
+   "precision": "2"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "comm_amt_pm",
+   "fieldtype": "Currency",
+   "label": "Committed Amount Per Month",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "agree_time_column",
+   "fieldtype": "Column Break",
+   "label": "Agreement Time"
+  },
+  {
+   "fieldname": "column_break_nznj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nExpired\nCancelled",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.agreement_type == \"Rental\";",
+   "fieldname": "monthly_fix_amt",
+   "fieldtype": "Currency",
+   "label": "Monthly Fixed Amount",
+   "options": "Company:company:default_currency",
+   "read_only_depends_on": "eval:doc.agreement_type == \"TG\";"
+  },
+  {
+   "fieldname": "column_break_sxwn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "copy_commitment",
+   "fieldtype": "Check",
+   "label": "Copy Commitment"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "amount_commitment",
+   "fieldtype": "Check",
+   "label": "Amount Commitment"
+  },
+  {
+   "depends_on": "eval:doc.agreement_type == \"TG\";",
+   "fieldname": "total_copies_limit",
+   "fieldtype": "Int",
+   "label": "Total Copies Limit",
+   "read_only_depends_on": "eval:doc.agreement_type == \"Rental\";"
+  },
+  {
+   "fieldname": "section_break_uwkf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Taxes",
+   "options": "Custom Tax Charges Template"
+  },
+  {
+   "fieldname": "total_tax",
+   "fieldtype": "Currency",
+   "label": "Total Tax"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "time_duration",
+   "fieldtype": "Int",
+   "label": "Time(Duration)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_unit",
+   "fieldtype": "Select",
+   "label": "Time(Unit)",
+   "options": "\nDay\nWeek\nMonth\nYear",
+   "reqd": 1
+  },
+  {
+   "fieldname": "more_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Info",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "copies_used",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Copies Used",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "customer_address",
+   "fieldtype": "Link",
+   "label": "Customer Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "address_line1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "address_line2",
+   "fieldtype": "Data",
+   "label": "Address Line 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dsmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "contact.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_rbmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ggzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "machine_make",
+   "fieldtype": "Link",
+   "label": "Make",
+   "options": "Brand"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "label": "PO No"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Disabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Billing",
+   "link_doctype": "TG And Rental Bill",
+   "link_fieldname": "agreement_no"
+  }
+ ],
+ "modified": "2026-07-01 17:25:51.882924",
+ "modified_by": "Administrator",
+ "module": "TG And Rental",
+ "name": "Rent TG Agreement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

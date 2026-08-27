@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-02 23:07:43.821522",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "rate",
+  "column_break_wzha",
+  "free_copies",
+  "section_break_tqfo",
+  "prev_cc",
+  "curr_cc",
+  "column_break_fqes",
+  "bill_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "link_filters": "[[\"Item\",\"item_group\",\"=\",\"Paper\"]]",
+   "options": "Item"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "free_copies",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Free Copies"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_wzha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "prev_cc",
+   "fieldtype": "Int",
+   "label": "Previous Copy Count"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "curr_cc",
+   "fieldtype": "Int",
+   "label": "Current Copy Count"
+  },
+  {
+   "fieldname": "section_break_tqfo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fqes",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bill_no",
+   "fieldtype": "Link",
+   "label": "Bill No",
+   "options": "TG And Rental Bill"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-19 18:41:41.315283",
+ "modified_by": "Administrator",
+ "module": "TG And Rental",
+ "name": "Agreement Items Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

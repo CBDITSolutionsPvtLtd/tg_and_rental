@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-02 23:09:20.316432",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "column_break_ewkw",
+  "item_name",
+  "section_break_ydsm",
+  "current_cc",
+  "previous_cc",
+  "column_break_jowj",
+  "total_copies",
+  "free_copies",
+  "net_copy",
+  "section_break_bhua",
+  "rate",
+  "column_break_zhhy",
+  "amount"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ewkw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ydsm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "previous_cc",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Previous CC"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 2,
+   "fieldname": "current_cc",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Current CC"
+  },
+  {
+   "fieldname": "column_break_jowj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_copies",
+   "fieldtype": "Int",
+   "label": "Total Copies",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "free_copies",
+   "fieldtype": "Int",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Free Copies",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "net_copy",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Net Copies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bhua",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_zhhy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 2,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-24 18:14:29.883359",
+ "modified_by": "Administrator",
+ "module": "TG And Rental",
+ "name": "Rented Items Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

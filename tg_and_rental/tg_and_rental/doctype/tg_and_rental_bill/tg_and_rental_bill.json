@@ -1,0 +1,545 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-09-02 23:17:31.428373",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "customer",
+  "agreement_no",
+  "column_break_iiuh",
+  "posting_date",
+  "due_date",
+  "column_break_xmty",
+  "bill_from",
+  "bill_to",
+  "column_break_pslf",
+  "month",
+  "year",
+  "contract_detail_section",
+  "type",
+  "cnt_start_dt",
+  "cnt_end_dt",
+  "column_break_egzj",
+  "comm_copies_pm",
+  "comm_rate_pc",
+  "comm_amt_pm",
+  "column_break_dczt",
+  "monthly_fix_amt",
+  "section_break_chpb",
+  "manual_previous_cc",
+  "copies",
+  "section_break_wkqk",
+  "total_amt",
+  "column_break_ybsy",
+  "actual_total",
+  "section_break_bfba",
+  "total_current_copy",
+  "column_break_dcow",
+  "total_copies",
+  "column_break_wdwu",
+  "total_free_copy",
+  "column_break_ugtc",
+  "total_net_copy",
+  "section_break_ipha",
+  "taxes",
+  "total_tax",
+  "section_break_efpu",
+  "column_break_qrmv",
+  "grand_total",
+  "enable_rounded_total",
+  "rounded_total",
+  "column_break_cilw",
+  "after_due_amount",
+  "column_break_unuo",
+  "outstanding_amount",
+  "amended_from",
+  "contact_tab",
+  "customer_address",
+  "column_break_oamu",
+  "contact",
+  "contact_person",
+  "mobile_no",
+  "email_id",
+  "more_info_tab",
+  "status",
+  "paid_amt",
+  "column_break_qtnc",
+  "prev_total",
+  "prev_paid_amount",
+  "prev_balance",
+  "section_break_skqv",
+  "tally_bill_create"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "Rental\nTG",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iiuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Billing Date"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "column_break_xmty",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bill_from",
+   "fieldtype": "Date",
+   "label": "Bill From",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bill_to",
+   "fieldtype": "Date",
+   "label": "Bill To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Detail"
+  },
+  {
+   "fieldname": "cnt_start_dt",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_egzj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cnt_end_dt",
+   "fieldtype": "Date",
+   "label": "Contract End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dczt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agreement_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Agreement No",
+   "options": "Rent TG Agreement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_chpb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "copies",
+   "fieldtype": "Table",
+   "label": "Copies",
+   "options": "Rented Items Table"
+  },
+  {
+   "fieldname": "section_break_efpu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_copies",
+   "fieldtype": "Int",
+   "label": "Total Copies",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cilw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_amt",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "comm_copies_pm",
+   "fieldtype": "Int",
+   "label": "Comm Copies/Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "comm_rate_pc",
+   "fieldtype": "Currency",
+   "label": "Comm. Rate/Copy",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "comm_amt_pm",
+   "fieldtype": "Currency",
+   "label": "Comm. Amount/Month",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monthly_fix_amt",
+   "fieldtype": "Currency",
+   "label": "Monthly Fixed Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_current_copy",
+   "fieldtype": "Int",
+   "label": "Total Current Copy",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_free_copy",
+   "fieldtype": "Int",
+   "label": "Total Free Copy",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_net_copy",
+   "fieldtype": "Int",
+   "label": "Total Net Copy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_unuo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TG And Rental Bill",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_bfba",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dcow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wdwu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ugtc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ipha",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Taxes",
+   "options": "Custom Tax Charges Template"
+  },
+  {
+   "fieldname": "column_break_qrmv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_tax",
+   "fieldtype": "Currency",
+   "label": "Total Tax",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wkqk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ybsy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "actual_total",
+   "fieldtype": "Currency",
+   "label": "Actual Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "more_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Info",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nOverdue (Not Invoiced)\nBilled (Not Invoiced)\nPaid\nPartly Paid\nUnpaid\nOverdue\nCancelled",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "after_due_amount",
+   "fieldtype": "Currency",
+   "label": "After Due Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qtnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prev_total",
+   "fieldtype": "Currency",
+   "label": "Prev Total",
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "prev_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Prev Paid Amount",
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "prev_balance",
+   "fieldtype": "Currency",
+   "label": "Prev Balance",
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_amt",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pslf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "read_only": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "contact_tab",
+   "fieldtype": "Tab Break",
+   "label": "Address Contact"
+  },
+  {
+   "fetch_from": "agreement_no.contact_person",
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "label": "Contact Person",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "agreement_no.contact",
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "agreement_no.contact_number",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_oamu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "agreement_no.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "agreement_no.customer_address",
+   "fieldname": "customer_address",
+   "fieldtype": "Link",
+   "label": "Customer Address",
+   "options": "Address"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "manual_previous_cc",
+   "fieldtype": "Check",
+   "label": "Manual Previous Count"
+  },
+  {
+   "fieldname": "section_break_skqv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "tally_bill_create",
+   "fieldtype": "Check",
+   "label": "Bill Created In Tally",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "1",
+   "fieldname": "enable_rounded_total",
+   "fieldtype": "Check",
+   "label": "Enable Rounded Total"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rounded_total",
+   "fieldtype": "Currency",
+   "label": "Rounded Total Amount",
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Sales Invoice",
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "custom_tg_rent_bill"
+  }
+ ],
+ "modified": "2026-07-28 17:25:26.962283",
+ "modified_by": "Administrator",
+ "module": "TG And Rental",
+ "name": "TG And Rental Bill",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-13 21:01:15.157859",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "bill_setting_tab",
+  "bill_due_days",
+  "overdue_charge_percent",
+  "column_break_mwas",
+  "ads_image",
+  "payment_qr",
+  "set_account_tab",
+  "cgst_account_head",
+  "sgst_account_head",
+  "column_break_zemf",
+  "igst_account_head",
+  "tds_account_head"
+ ],
+ "fields": [
+  {
+   "fieldname": "bill_setting_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bill Setting"
+  },
+  {
+   "default": "15",
+   "description": "In bill Due Date will be days after the Billing Date",
+   "fieldname": "bill_due_days",
+   "fieldtype": "Int",
+   "label": "Bill Due Days"
+  },
+  {
+   "fieldname": "overdue_charge_percent",
+   "fieldtype": "Percent",
+   "label": "Bill Overdue Charge Percent"
+  },
+  {
+   "fieldname": "set_account_tab",
+   "fieldtype": "Tab Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "cgst_account_head",
+   "fieldtype": "Link",
+   "label": "CGST Account",
+   "link_filters": "[[\"Account\",\"account_type\",\"=\",\"Tax\"],[\"Account\",\"root_type\",\"=\",\"Liability\"],[\"Account\",\"disabled\",\"=\",0],[\"Account\",\"is_group\",\"=\",0]]",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sgst_account_head",
+   "fieldtype": "Link",
+   "label": "SGST Account",
+   "link_filters": "[[\"Account\",\"account_type\",\"=\",\"Tax\"],[\"Account\",\"root_type\",\"=\",\"Liability\"],[\"Account\",\"is_group\",\"=\",0],[\"Account\",\"disabled\",\"=\",0]]",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_zemf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "igst_account_head",
+   "fieldtype": "Link",
+   "label": "IGST Account",
+   "link_filters": "[[\"Account\",\"account_type\",\"=\",\"Tax\"],[\"Account\",\"root_type\",\"=\",\"Liability\"],[\"Account\",\"is_group\",\"=\",0],[\"Account\",\"disabled\",\"=\",0]]",
+   "options": "Account"
+  },
+  {
+   "fieldname": "tds_account_head",
+   "fieldtype": "Link",
+   "label": "TDS Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "ads_image",
+   "fieldtype": "Attach Image",
+   "label": "Ads Image"
+  },
+  {
+   "fieldname": "column_break_mwas",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_qr",
+   "fieldtype": "Attach Image",
+   "label": "Payment QR"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-12-26 12:13:54.021945",
+ "modified_by": "Administrator",
+ "module": "TG And Rental",
+ "name": "Rent TG Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

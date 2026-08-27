@@ -1,0 +1,190 @@
+{
+ "charts": [
+  {
+   "chart_name": "AMC, Warranty and TG Details",
+   "label": "AMC, Warranty and TG Details"
+  }
+ ],
+ "content": "[{\"id\":\"Qg7yn77Yn4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Rental/TG</span>\",\"col\":12}},{\"id\":\"4lydfD5ANk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Warranty Reminder\",\"col\":3}},{\"id\":\"qnOUY1IUJ2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"TG Reminder\",\"col\":3}},{\"id\":\"V3-HqPzSPy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"AMC Reminder\",\"col\":3}},{\"id\":\"jKE5Ub1NXs\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rental Reminder\",\"col\":3}},{\"id\":\"FaRwtGVldL\",\"type\":\"chart\",\"data\":{\"chart_name\":\"AMC, Warranty and TG Details\",\"col\":12}},{\"id\":\"k1-iCmkoRa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Agreement(Act.)\",\"col\":3}},{\"id\":\"D_WWLTIRWo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"TG Agreement(Act.)\",\"col\":3}},{\"id\":\"FY2Wc6y9cI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Paid Bill\",\"col\":3}},{\"id\":\"VbqhU-xhGN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overdue Bill\",\"col\":3}},{\"id\":\"6Qi5pLgwEk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Agreement(Exp.)\",\"col\":3}},{\"id\":\"SWConprXGB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"TG Agreement(Exp.)\",\"col\":3}},{\"id\":\"wFlqZvkZ9B\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unpaid Bill\",\"col\":3}},{\"id\":\"_r0BVDSEmg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"jiz_XFK25s\",\"type\":\"card\",\"data\":{\"card_name\":\"TG & Rental Master\",\"col\":4}},{\"id\":\"F24iVI1a7D\",\"type\":\"card\",\"data\":{\"card_name\":\"Setting\",\"col\":4}},{\"id\":\"X9Q9ZT9iCa\",\"type\":\"card\",\"data\":{\"card_name\":\"Report\",\"col\":4}}]",
+ "creation": "2025-07-21 23:10:59.709138",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "shrink",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Rent & TG",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TG & Rental Master",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rent TG Agreement",
+   "link_count": 0,
+   "link_to": "Rent TG Agreement",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TG And Rental Bill",
+   "link_count": 0,
+   "link_to": "TG And Rental Bill",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setting",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Rent TG Setting",
+   "link_count": 0,
+   "link_to": "Rent TG Setting",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Report",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Serial No Status",
+   "link_count": 0,
+   "link_to": "Serial No Status",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Serial No",
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-10-31 12:54:59.784027",
+ "modified_by": "Administrator",
+ "module": "TG And Rental",
+ "name": "Rent & TG",
+ "number_cards": [
+  {
+   "label": "TG Reminder",
+   "number_card_name": "TG Reminder"
+  },
+  {
+   "label": "Warranty Reminder",
+   "number_card_name": "Warranty Reminder"
+  },
+  {
+   "label": "AMC Reminder",
+   "number_card_name": "AMC Reminder"
+  },
+  {
+   "label": "Rental Reminder",
+   "number_card_name": "Rental Reminder"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Rental Manager"
+  },
+  {
+   "role": "Rental User"
+  },
+  {
+   "role": "All"
+  },
+  {
+   "role": "Accounts Manager"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Unpaid Bill",
+   "link_to": "TG And Rental Bill",
+   "stats_filter": "[[\"TG And Rental Bill\",\"status\",\"in\",[\"Billed (Not Invoiced)\",\"Unpaid\",null],false],[\"TG And Rental Bill\",\"docstatus\",\"=\",\"1\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Overdue Bill",
+   "link_to": "TG And Rental Bill",
+   "stats_filter": "[[\"TG And Rental Bill\",\"status\",\"in\",[\"Overdue(Not Invoiced)\",\"Overdue\",null],false],[\"TG And Rental Bill\",\"docstatus\",\"=\",\"1\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Rent Agreement(Act.)",
+   "link_to": "Rent TG Agreement",
+   "stats_filter": "[[\"Rent TG Agreement\",\"agreement_type\",\"=\",\"Rental\",false],[\"Rent TG Agreement\",\"status\",\"=\",\"Active\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Paid Bill",
+   "link_to": "TG And Rental Bill",
+   "stats_filter": "[[\"TG And Rental Bill\",\"status\",\"=\",\"Paid\",false],[\"TG And Rental Bill\",\"docstatus\",\"=\",\"1\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "TG Agreement(Exp.)",
+   "link_to": "Rent TG Agreement",
+   "stats_filter": "[[\"Rent TG Agreement\",\"agreement_type\",\"=\",\"TG\",false],[\"Rent TG Agreement\",\"status\",\"=\",\"Expired\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Rent Agreement(Exp.)",
+   "link_to": "Rent TG Agreement",
+   "stats_filter": "[[\"Rent TG Agreement\",\"agreement_type\",\"=\",\"Rental\",false],[\"Rent TG Agreement\",\"status\",\"=\",\"Expired\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "TG Agreement(Act.)",
+   "link_to": "Rent TG Agreement",
+   "stats_filter": "[[\"Rent TG Agreement\",\"agreement_type\",\"=\",\"TG\",false],[\"Rent TG Agreement\",\"status\",\"=\",\"Active\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Rent & TG"
+}
